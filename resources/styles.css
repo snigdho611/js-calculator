@@ -1,0 +1,49 @@
+*
+{
+    font-family: serif;
+}
+
+.calc-body
+{
+    display: flex;
+    flex-direction:column;
+}
+
+.calc-row
+{
+    display: flex;
+    flex-direction:row;
+}
+
+.btn-1, .btn-2
+{
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size:2.25rem;
+    margin: 0.15rem;
+    transition: background-color 0.3s;
+}
+
+.btn-1
+{
+    background-color:indigo;
+    color:aliceblue;
+}
+
+.btn-1:hover
+{
+    background-color: rgb(129, 92, 156);
+}
+
+.btn-2
+{
+    background-color:hsl(275, 100%, 5%);
+    color:aliceblue;
+}
+
+.btn-2:hover
+{
+    background-color:rgb(66, 31, 66);
+
+    color:aliceblue;
+}
