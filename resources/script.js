@@ -3,8 +3,9 @@ console.log('script detected');
 let operatorFlag = false;
 let operation;
 let inputBox = document.getElementById('inputBox');
+let outputBox = document.getElementById('outputBox');
 
-const getResult = (input_1, input_2, operator) => {
+const getResult = (input_1, input_2, operation) => {
     if(operation == "+")
     {
         return parseInt(input_1)+parseInt(input_2);
@@ -25,27 +26,29 @@ const getResult = (input_1, input_2, operator) => {
 
 const onInputClick = (e) => {
     let first_val, second_val, res_val;
-    if(e.target.id == "+" || e.target.id == "-" || e.target.id == "x"  || e.target.id == "/" )
+    if(e.target.id == "add" || e.target.id == "sub" || e.target.id == "mul"  || e.target.id == "div" )
     {
         if(document.getElementById('outputBox').value == "")
         {
             if(operatorFlag == true)
             {
-                let arr = inputBox.value.split(operation);
-                first_val = arr[0];
-                second_val = arr[1];
-
-                res_val = getResult(first_val, second_val, operation);
-
-                console.log(res_val);
-                document.getElementById('outputBox').value = res_val;
-                inputBox.value = e.target.id;
+                inputBox.value = "";
                 operatorFlag = false;
+                // let arr = inputBox.value.split(operation);
+                // first_val = arr[0];
+                // second_val = arr[1];
+
+                // res_val = getResult(first_val, second_val, operation);
+
+                // console.log(res_val);
+                // document.getElementById('outputBox').value = res_val;
+                // inputBox.value = e.target.id;
+                // operatorFlag = false;
             }
             else
             {
-                inputBox.value = inputBox.value + e.target.id;
-                operation = e.target.id;
+                // inputBox.value = inputBox.value + e.target.value;
+                operation = e.target.value;
                 operatorFlag = true;
             }
         }
@@ -53,6 +56,8 @@ const onInputClick = (e) => {
         {
             
         }
+        console.log(e.target.value);
+        inputBox.value = inputBox.value + e.target.value;
     }
     else
     {
@@ -84,7 +89,7 @@ document.getElementById('8').addEventListener('click', onInputClick);
 document.getElementById('9').addEventListener('click', onInputClick);
 
 //Operators
-document.getElementById('+').addEventListener('click', onInputClick);
-document.getElementById('-').addEventListener('click', onInputClick);
-document.getElementById('x').addEventListener('click', onInputClick);
-document.getElementById('/').addEventListener('click', onInputClick);
+document.getElementById('add').addEventListener('click', onInputClick);
+document.getElementById('sub').addEventListener('click', onInputClick);
+document.getElementById('mul').addEventListener('click', onInputClick);
+document.getElementById('div').addEventListener('click', onInputClick);
