@@ -1,30 +1,65 @@
 console.log('script detected');
 
-// let inputVal = "";
 let operatorFlag = false;
+let operation;
 let inputBox = document.getElementById('inputBox');
 
+const getResult = (input_1, input_2, operator) => {
+    if(operation == "+")
+    {
+        return parseInt(input_1)+parseInt(input_2);
+    }
+    else if(operation == "-")
+    {
+        return parseInt(input_1)-parseInt(input_2);
+    }
+    else if(operation == "x")
+    {
+        return parseInt(input_1)*parseInt(input_2);
+    }
+    else if(operation == "/")
+    {
+        return parseInt(input_1)/parseInt(input_2);
+    }
+}
+
 const onInputClick = (e) => {
-    // console.log(e.target.id);
+    let first_val, second_val, res_val;
     if(e.target.id == "+" || e.target.id == "-" || e.target.id == "x"  || e.target.id == "/" )
     {
-        // document.getElementById('input').value = document.getElementById('input').value+e.id;
-        if(operatorFlag == true)
+        if(document.getElementById('outputBox').value == "")
         {
-            // inputVal = "";
-            inputBox.value = "";
-            operatorFlag = false;
+            if(operatorFlag == true)
+            {
+                // inputVal = "";
+                let arr = inputBox.value.split(operation);
+                first_val = arr[0];
+                second_val = arr[1];
+
+                res_val = getResult(first_val, second_val, operation);
+
+                console.log(res_val);
+                document.getElementById('outputBox').value = res_val;
+                inputBox.value = e.target.id;
+                operatorFlag = false;
+            }
+            else
+            {
+                inputBox.value = inputBox.value + e.target.id;
+                operation = e.target.id;
+                operatorFlag = true;
+            }
         }
         else
         {
-            operatorFlag = true;
+            
         }
     }
     else
     {
         //continue
-    }
         inputBox.value = inputBox.value + e.target.id;
+    }
 }
 
 // const onInputChange = (e) => {
