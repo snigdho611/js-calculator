@@ -5,18 +5,23 @@
 
 body
 {
-    background-color: rgb(22, 0, 22);
+    background-color: rgb(179, 175, 238);
 }
 
-.calc-body
+#calc-body
 {
     display: flex;
     flex-direction:column;
     justify-self: center;
-    margin: 0 auto;
+    margin: 6.25rem auto;
+    /* padding: 4rem auto; */
+    border: 0.25rem inset rgb(91, 2, 133);
+    border-radius: 1.5rem;
     width: 40%;
-    background-color: rgb(235, 216, 238);
+    background-color: rgb(54, 54, 54);
+    padding-bottom: 2rem;
 }
+
 
 #calc-display, .calc-row
 {
@@ -27,12 +32,17 @@ body
 
 #calc-display
 {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+#calc-display
+{
     display:flex;
     flex-direction: column;
-    background-color: rgb(98, 46, 105);
+    /* background-color: rgb(98, 46, 105); */
     align-content: center;
     width: 80%;
-
 }
 
 #inputBox, #outputBox
@@ -42,8 +52,9 @@ body
     margin: 0.25rem 1rem;
     text-align: right;
     border: none;
-    background-color: rgb(245, 236, 245);
+    background-color: rgb(250, 239, 250);
     border-radius: 0.75rem;
+    border: 0.15rem solid purple;
 }
 
 .calc-row
@@ -88,6 +99,5 @@ body
 .btn-2:hover
 {
     background-color:rgb(66, 31, 66);
-
     color:aliceblue;
 }
