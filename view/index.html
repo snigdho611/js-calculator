@@ -10,23 +10,74 @@
 <body>
     <div class="calc-body">
         <div id="calc-display">
-            <input id="output" type="text">
-            <input id="input" value="1" type="text">
+            <input id="outputBox" type="text">
+            <input id="inputBox" placeholder="0" value="" type="text" >
+            <!-- onchange="return onInputChange()" -->
+        </div>
+        <div class="calc-row">
+            <button class="btn-1" id="7">7</button>
+            <button class="btn-1" id="8">8</button>
+            <button class="btn-1" id="9">9</button>
+            <button class="btn-1" id="+">+</button>
+            <button class="btn-1" id="-">-</button>
+
+        </div>
+        <div class="calc-row">
+            <button class="btn-1" id="4">4</button>
+            <button class="btn-1" id="5">5</button>
+            <button class="btn-1" id="6">6</button>
+            <button class="btn-1" id="x">x</button>
+            <button class="btn-1" id="/">/</button>
+        </div>
+        <div class="calc-row">
+            <button class="btn-1" id="1">1</button>
+            <button class="btn-1" id="2">2</button>
+            <button class="btn-1" id="3">3</button>
+            <button class="btn-1"></button>
+            <button class="btn-1"></button>
+        </div>
+        <div class="calc-row">
+            <button class="btn-2">.</button>
+            <button class="btn-2">0</button>
+            <button class="btn-2">=</button>
+            <button class="btn-1"></button>
+            <button class="btn-1"></button>
+        </div>
+    </div>
+    <script src="../resources/script.js"></script>
+</body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calc-body">
+        <div id="calc-display">
+            <input id="outputBox" type="text">
+            <input id="inputBox" value="1" type="text" >
+            onchange="return onInputChange()"
         </div>
         <div class="calc-row">
             <button class="btn-1" id="7" onclick="return onInputClick(this)">7</button>
             <button class="btn-1" id="8" onclick="return onInputClick(this)">8</button>
             <button class="btn-1" id="9" onclick="return onInputClick(this)">9</button>
-            <button class="btn-1">+</button>
-            <button class="btn-1">-</button>
+            <button class="btn-1" id="+" onclick="return onInputClick(this)">+</button>
+            <button class="btn-1" id="-" onclick="return onInputClick(this)">-</button>
 
         </div>
         <div class="calc-row">
             <button class="btn-1" id="4" onclick="return onInputClick(this)">4</button>
             <button class="btn-1" id="5" onclick="return onInputClick(this)">5</button>
             <button class="btn-1" id="6" onclick="return onInputClick(this)">6</button>
-            <button class="btn-1">x</button>
-            <button class="btn-1">/</button>
+            <button class="btn-1" id="x" onclick="return onInputClick(this)">x</button>
+            <button class="btn-1" id="/" onclick="return onInputClick(this)">/</button>
         </div>
         <div class="calc-row">
             <button class="btn-1" id="1" onclick="return onInputClick(this)">1</button>
@@ -45,4 +96,4 @@
     </div>
     <script src="../resources/script.js"></script>
 </body>
-</html>
+</html> -->

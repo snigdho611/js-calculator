@@ -28,7 +28,7 @@
     background-color: lightcoral;
 }
 
-#input, #output
+#inputBox, #outputBox
 {
     padding: 0.25rem 1rem;
     font-size: 1.75rem;
