@@ -7,6 +7,36 @@
 {
     display: flex;
     flex-direction:column;
+    /* align-self: center; */
+    justify-self: center;
+    margin: 0 auto;
+    width: 70%;
+    background-color: lawngreen;
+}
+
+#calc-display, .calc-row
+{
+    width: 60%;
+    margin:0 auto;
+    justify-content: center;
+}
+
+#calc-display
+{
+    display:flex;
+    flex-direction: column;
+    background-color: lightcoral;
+}
+
+#input, #output
+{
+    padding: 0.25rem 1rem;
+    font-size: 1.75rem;
+    margin: 0.25rem 1rem;
+    text-align: right;
+    border: none;
+    background-color: rgb(245, 236, 245);
+    border-radius: 0.75rem;
 }
 
 .calc-row
