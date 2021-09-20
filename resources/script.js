@@ -31,7 +31,6 @@ const onInputClick = (e) => {
         {
             if(operatorFlag == true)
             {
-                // inputVal = "";
                 let arr = inputBox.value.split(operation);
                 first_val = arr[0];
                 second_val = arr[1];
@@ -68,7 +67,7 @@ const onInputClick = (e) => {
 
 
 const updateValue = (e) => {
-    console.log(e.target.value);
+    console.log(e.target.value[e.target.value.length-1]);
 }
 
 document.getElementById('inputBox').addEventListener('input', updateValue);
