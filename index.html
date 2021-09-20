@@ -12,7 +12,7 @@
     <div class="calc-body">
         <div id="calc-display">
             <input id="outputBox" readonly type="text">
-            <input pattern="[0-9]+" id="inputBox" placeholder="0" value="" type="text">
+            <input pattern="[0-9]+" readonly id="inputBox" placeholder="0" value="" type="text">
             <!-- onchange="return onInputChange()" -->
         </div>
         <div class="calc-row">
@@ -33,16 +33,15 @@
             <button class="btn-1" id="1">1</button>
             <button class="btn-1" id="2">2</button>
             <button class="btn-1" id="3">3</button>
-            <button class="btn-2" id="mul" value="*">&times;</button>
+            <button class="btn-2" id="mul" value="×">&times;</button>
             <button class="btn-2" id="div" value="/">/</button>
         </div>
         <div class="calc-row">
             <button class="btn-1" id="dec">.</button>
             <button class="btn-1" id="0">0</button>
-            
-            <button class="btn-1">π</button>
-            <button class="btn-2">e</button>
-            <button class="btn-2">=</button>
+            <button class="btn-1" id="pi">π</button>
+            <button class="btn-2" id="exp">e</button>
+            <button class="btn-2" id="eql">=</button>
         </div>
     </div>
     <script src="./resources/script.js"></script>
