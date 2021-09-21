@@ -28,11 +28,30 @@ const onInputClick = (e) => {
     else if(e.target.id == "del"){
         inputBox.value = "";
         outputBox.value = "";
+        operatorFlag = false;
     }
     else if(e.target.id == "eql"){
-        
+        if(document.getElementById('outputBox').value == ""){
+            if(operatorFlag == true){
+                let arr = inputBox.value.split(operation);
+                first_val = arr[0];
+                second_val = arr[1];
+                res_val = getResult(first_val, second_val, operation);
+                getResult(first_val, second_val, operation);
+                console.log(getResult(first_val, second_val, operation));
+                outputBox.value = getResult(first_val, second_val, operation);
+                inputBox.value = "";
+                operatorFlag = false;
+            }
+            else{
+                operation = e.target.value;
+                operatorFlag = true;
+            }
+        }
+        else{
+
+        }
     }
-    // console.log(e.target.id)
     else if(e.target.id == "add" || e.target.id == "sub" || e.target.id == "mul"  || e.target.id == "div" ){
         if(document.getElementById('outputBox').value == ""){
             if(operatorFlag == true){
@@ -47,7 +66,6 @@ const onInputClick = (e) => {
                 operatorFlag = false;
             }
             else{
-                // inputBox.value = inputBox.value + e.target.value;
                 operation = e.target.value;
                 operatorFlag = true;
             }
@@ -59,13 +77,13 @@ const onInputClick = (e) => {
             inputBox.value = "";
             console.log('result: '+getResult(first_val, second_val, operation));
             outputBox.value = getResult(first_val, second_val, operation);
+            console.log('control is here')
         }
         inputBox.value = inputBox.value + e.target.value;
     }
     else{
         inputBox.value = inputBox.value + e.target.id;
     }
-    // console.log(inputBox.value)
 }
 
 const updateValue = (e) => {
