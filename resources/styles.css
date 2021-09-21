@@ -101,3 +101,37 @@ body
     background-color:rgb(66, 31, 66);
     color:aliceblue;
 }
+
+.footer
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding-right: 0.45rem;
+    padding-bottom: 0.4rem;
+}
+
+.footer footer
+{
+    font-size: 1.25rem;
+}
+.footer footer a
+{
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    transition: color 0.5s, background-color 0.5s;
+    color:indigo;
+    font-size: 1.25rem;
+}
+
+.footer footer a:hover
+{
+    color:rgb(182, 73, 182);
+}
+
+#title-label
+{
+    color: rgb(243, 155, 239);
+    margin: 0 auto;
+}
